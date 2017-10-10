@@ -25,6 +25,7 @@ gulp.task("watch", function () {
                     }
                 }]
         },
+        plugins: [new webpack.DefinePlugin({'process.env': {'NODE_ENV': JSON.stringify('development')}})],
         output: {
             path: path.join(__dirname, "./dest/"),
             filename: '[name].js'
